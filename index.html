@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Quiz Vue.js</title>
+        <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+
+
+    </head>
+    <body>
+        <div id="app">
+        <form>
+            <h1>{{message}}</h1>
+            
+            <ul v-for="(quiz, i) in quizs" v-show="current_quiz == i">
+                <h2>{{quiz.question}}</h2> 
+                <li><input type="radio"  v-model="current_selection" :value="quiz.answers[0]">{{quiz.answers[0]}}</li>
+                <li><input type="radio"  v-model="current_selection" :value="quiz.answers[1]">{{quiz.answers[1]}}</li>
+                <li><input type="radio"  v-model="current_selection" :value="quiz.answers[2]">{{quiz.answers[2]}}</li>
+                <li><input type="radio"  v-model="current_selection" :value="quiz.answers[3]">{{quiz.answers[3]}}</li>
+            </ul>
+                  
+        </form>
+        <button type="button"  @click="prev_quiz">prev</button>
+        <button type="button" @click="next_quiz" >next</button>
+    </div>
+    <script src="scripts.js"></script>    
+
+    </body>
+</html>
