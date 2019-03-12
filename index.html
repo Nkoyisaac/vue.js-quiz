@@ -3,11 +3,18 @@
     <head>
         <title>Quiz Vue.js</title>
         <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+        <link href="style.css" rel="stylesheet" type="text/css">
 
 
     </head>
     <body>
-        <div id="app">
+        <nav>
+           <div>
+
+           </div>
+        </nav>
+        <section>
+            <div class="divi" id="app">
         <form>
             <h1>{{message}}</h1>
             
@@ -23,6 +30,13 @@
         <button type="button"  @click="prev_quiz">prev</button>
         <button type="button" @click="next_quiz" >next</button>
     </div>
+        </section>
+        <footer>
+            <div>
+
+            </div>
+        </footer>
+        
     <script src="scripts.js"></script>    
 
     </body>

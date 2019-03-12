@@ -6,25 +6,35 @@ let app = new Vue({
             this.current_quiz++
             alert(this.score)
             if(this.score == 1) {
-                alert(this.message1)
+                alert(this.messages[0].message1)
             }
+            if(this.score == 5){
+                alert(this.messages[1].message2)
+            } if(this.score == 20){
+                alert(this.messages[2].message3)
+            }
+               
         },       
         prev_quiz() {
             this.current_quiz--
         },
-      score_method() {
+        score_method() {
        if (this.current_selection == this.quizs[this.current_quiz].correctAnswer) {
            this.score++
        }
-      }
-    },
+      
+    }
+},
 
     data:{ 
         message:"Welcome to the quiz",
+        messages:[{message1:"humble beginning!"},
+                  {message2:"you are the hero that we need!"},
+                  {message3:"Congratulations!!! you ve made it"}
+                ],
         score:0,
         current_selection:0,
         current_quiz: 0,
-        messages: [{message1:"bon depart!"}],
         quizs: [
         {title: 'test1', 
         Number: 1, 
@@ -34,7 +44,7 @@ let app = new Vue({
         {title: 'test2',
          Number: 2, 
          question: 'Against which illness do you use insuline?',
-         answers: ['high blood [pressure', 'adiposity', 'diabetes', 'cardiac infection'],
+         answers: ['high blood pressure', 'adiposity', 'diabetes', 'cardiac infection'],
          correctAnswer: 'diabetes'},
         {title: 'test3',
          Number: 3,

@@ -1,0 +1,11 @@
+.divi{
+    background-color: aqua;
+}
+div li{
+     list-style: none;
+     display: inline-block;
+}
+#app{
+    text-align: center;
+    
+}
